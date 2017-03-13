@@ -137,7 +137,6 @@ if ( ! class_exists( 'LodoFramework' ) ) {
 		 */
 		private function load() {
 			new \LodoFramework\Load();
-			new \LodoFramework\Install();
 		}
 
 	}

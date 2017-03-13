@@ -9,6 +9,8 @@
 namespace LodoFramework;
 
 
+use LodoFramework\Utilities\Version;
+
 class Install {
 
 	public function __construct() {
@@ -16,7 +18,7 @@ class Install {
 	}
 
 	public static function activation() {
-		update_option( 'ldframework_version', LODOFRAMEWORK_VERSION, true );
+		Version::__set();
 	}
 
 	public static function run_activation_manually() {
