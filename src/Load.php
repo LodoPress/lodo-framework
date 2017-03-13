@@ -8,6 +8,8 @@
 
 namespace LodoFramework;
 
+use LodoFramework\Admin\Notice;
+
 class Load {
 
 	public function __construct() {
@@ -17,6 +19,7 @@ class Load {
 	public function load_admin() {
 		if ( is_admin() ) {
 			new Admin\Init();
+			new Notice();
 		}
 	}
 }

@@ -108,6 +108,10 @@ if ( ! class_exists( 'LodoFramework' ) ) {
 				define( 'LODOFRAMEWORK_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 			}
 
+			if ( ! defined( 'LODOFRAMEWORK_PLUGIN_FILE' ) ) {
+				define( 'LODOFRAMEWORK_PLUGIN_FILE', __FILE__ );
+			}
+
 		}
 
 		/**
@@ -133,6 +137,7 @@ if ( ! class_exists( 'LodoFramework' ) ) {
 		 */
 		private function load() {
 			new \LodoFramework\Load();
+			new \LodoFramework\Install();
 		}
 
 	}
